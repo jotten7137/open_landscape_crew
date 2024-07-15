@@ -1,7 +1,11 @@
 import os
+import datetime as dt
 from exa_py import Exa
 from langchain.agents import Tool
 from typing import List, Union
+
+today = dt.date.today()
+week_ago = today - dt.timedelta(days=7)
 
 class FieldSearchToolset:
     def __init__(self, field):
@@ -14,7 +18,8 @@ class FieldSearchToolset:
             f"latest {self.field} trends {query}",
             use_autoprompt=True,
             num_results=5,
-            start_published_date="2023-01-01"
+            start_published_date= str(week_ago),
+            end_published_date = str(today)
         )
 
     def search_research(self, *args, **kwargs):
@@ -24,7 +29,8 @@ class FieldSearchToolset:
             f"{self.field} research paper {query}",
             use_autoprompt=True,
             num_results=5,
-            start_published_date="2023-01-01"
+            start_published_date= str(week_ago),
+            end_published_date = str(today)
         )
 
     def search_news(self, *args, **kwargs):
@@ -34,7 +40,8 @@ class FieldSearchToolset:
             f"{self.field} news {query}",
             use_autoprompt=True,
             num_results=5,
-            start_published_date="2023-01-01"
+            start_published_date= str(week_ago),
+            end_published_date = str(today)
         )
 
     def find_similar(self, *args, **kwargs):
@@ -75,7 +82,8 @@ class FieldSearchToolset:
             f"{self.field} company {query}",
             use_autoprompt=True,
             num_results=5,
-            start_published_date="2023-01-01"
+            start_published_date= str(week_ago),
+            end_published_date = str(today)
         )
 
     def get_tools(self):

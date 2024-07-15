@@ -15,7 +15,7 @@ class Field_Tasks:
                 Consider advancements in relevant subfields and technologies within {self.field}.
                 Analyze recent research papers, industry reports, and expert opinions published within the last 6 months.
                 Focus on emerging technologies and methodologies that have the potential to significantly impact the {self.field} landscape in the next 1-3 years.
-                Also consider how AI and other cutting-edge technologies are influencing {self.field}.
+                Also consider how AI or Data Science and other cutting-edge technologies are influencing {self.field}.
                 Current date: {today}
                 """),
             expected_output=dedent(f"""\
@@ -28,7 +28,7 @@ class Field_Tasks:
                 6. Key players and companies driving this trend
                 7. Potential challenges or ethical considerations
                 8. References to relevant research papers, reports, or expert opinions
-                9. Analysis of how AI is impacting or could impact these trends in {self.field}
+                9. Analysis of how AI or Data Science is impacting or could impact these trends in {self.field}
                 """),
             agent=agent,
             async_execution=True
@@ -59,7 +59,7 @@ class Field_Tasks:
                 5. Recommendations for stakeholders (e.g., investors, policymakers, businesses)
                 6. Visual aids: Charts, graphs, or infographics to illustrate key points
                 7. List of sources and references used in the analysis
-                8. Analysis of AI's current and potential future impact on the {self.field} industry
+                8. Analysis of AI or Data Science's current and potential future impact on the {self.field} industry
                 
                 The report should be insightful, data-driven, and provide actionable intelligence for decision-makers in the {self.field} space.
                 """),
@@ -140,7 +140,7 @@ class Field_Tasks:
                 6. Emerging Technologies (2-3 pages)
                 - Breakthrough technologies in {self.field}
                 - Potential applications and impact
-                - Role of AI in advancing {self.field}
+                - How Data Science can be leveraged to assist {self.field}
 
                 7. Challenges and Opportunities (2-3 pages)
                 - Technical challenges
